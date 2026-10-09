@@ -1,0 +1,309 @@
+{
+  "version": 3,
+  "pages404": true,
+  "appType": "app",
+  "caseSensitive": false,
+  "basePath": "",
+  "redirects": [
+    {
+      "source": "/:path+/",
+      "destination": "/:path+",
+      "internal": true,
+      "priority": true,
+      "statusCode": 308,
+      "regex": "^(?:/((?:[^/]+?)(?:/(?:[^/]+?))*))/$"
+    }
+  ],
+  "headers": [],
+  "rewrites": {
+    "beforeFiles": [],
+    "afterFiles": [],
+    "fallback": []
+  },
+  "dynamicRoutes": [
+    {
+      "page": "/dashboard/all-guests/[id]",
+      "regex": "^/dashboard/all\\-guests/([^/]+?)(?:/)?$",
+      "routeKeys": {
+        "nxtPid": "nxtPid"
+      },
+      "namedRegex": "^/dashboard/all\\-guests/(?<nxtPid>[^/]+?)(?:/)?$"
+    },
+    {
+      "page": "/dashboard/guests/[id]",
+      "regex": "^/dashboard/guests/([^/]+?)(?:/)?$",
+      "routeKeys": {
+        "nxtPid": "nxtPid"
+      },
+      "namedRegex": "^/dashboard/guests/(?<nxtPid>[^/]+?)(?:/)?$"
+    },
+    {
+      "page": "/dashboard/hotels/[id]",
+      "regex": "^/dashboard/hotels/([^/]+?)(?:/)?$",
+      "routeKeys": {
+        "nxtPid": "nxtPid"
+      },
+      "namedRegex": "^/dashboard/hotels/(?<nxtPid>[^/]+?)(?:/)?$"
+    },
+    {
+      "page": "/dashboard/hotels/[id]/edit",
+      "regex": "^/dashboard/hotels/([^/]+?)/edit(?:/)?$",
+      "routeKeys": {
+        "nxtPid": "nxtPid"
+      },
+      "namedRegex": "^/dashboard/hotels/(?<nxtPid>[^/]+?)/edit(?:/)?$"
+    },
+    {
+      "page": "/dashboard/police-stations/[id]",
+      "regex": "^/dashboard/police\\-stations/([^/]+?)(?:/)?$",
+      "routeKeys": {
+        "nxtPid": "nxtPid"
+      },
+      "namedRegex": "^/dashboard/police\\-stations/(?<nxtPid>[^/]+?)(?:/)?$"
+    },
+    {
+      "page": "/dashboard/police-stations/[id]/edit",
+      "regex": "^/dashboard/police\\-stations/([^/]+?)/edit(?:/)?$",
+      "routeKeys": {
+        "nxtPid": "nxtPid"
+      },
+      "namedRegex": "^/dashboard/police\\-stations/(?<nxtPid>[^/]+?)/edit(?:/)?$"
+    },
+    {
+      "page": "/dashboard/staff/edit/[id]",
+      "regex": "^/dashboard/staff/edit/([^/]+?)(?:/)?$",
+      "routeKeys": {
+        "nxtPid": "nxtPid"
+      },
+      "namedRegex": "^/dashboard/staff/edit/(?<nxtPid>[^/]+?)(?:/)?$"
+    },
+    {
+      "page": "/dashboard/watchdogs/[id]",
+      "regex": "^/dashboard/watchdogs/([^/]+?)(?:/)?$",
+      "routeKeys": {
+        "nxtPid": "nxtPid"
+      },
+      "namedRegex": "^/dashboard/watchdogs/(?<nxtPid>[^/]+?)(?:/)?$"
+    },
+    {
+      "page": "/dashboard/watchdogs/[id]/edit",
+      "regex": "^/dashboard/watchdogs/([^/]+?)/edit(?:/)?$",
+      "routeKeys": {
+        "nxtPid": "nxtPid"
+      },
+      "namedRegex": "^/dashboard/watchdogs/(?<nxtPid>[^/]+?)/edit(?:/)?$"
+    }
+  ],
+  "staticRoutes": [
+    {
+      "page": "/",
+      "regex": "^/(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/(?:/)?$"
+    },
+    {
+      "page": "/_global-error",
+      "regex": "^/_global\\-error(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/_global\\-error(?:/)?$"
+    },
+    {
+      "page": "/_not-found",
+      "regex": "^/_not\\-found(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/_not\\-found(?:/)?$"
+    },
+    {
+      "page": "/dashboard",
+      "regex": "^/dashboard(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/dashboard(?:/)?$"
+    },
+    {
+      "page": "/dashboard/add-guest",
+      "regex": "^/dashboard/add\\-guest(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/dashboard/add\\-guest(?:/)?$"
+    },
+    {
+      "page": "/dashboard/all-guests",
+      "regex": "^/dashboard/all\\-guests(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/dashboard/all\\-guests(?:/)?$"
+    },
+    {
+      "page": "/dashboard/export-report",
+      "regex": "^/dashboard/export\\-report(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/dashboard/export\\-report(?:/)?$"
+    },
+    {
+      "page": "/dashboard/guests",
+      "regex": "^/dashboard/guests(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/dashboard/guests(?:/)?$"
+    },
+    {
+      "page": "/dashboard/hotels",
+      "regex": "^/dashboard/hotels(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/dashboard/hotels(?:/)?$"
+    },
+    {
+      "page": "/dashboard/hotels/onboard",
+      "regex": "^/dashboard/hotels/onboard(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/dashboard/hotels/onboard(?:/)?$"
+    },
+    {
+      "page": "/dashboard/hotels/rooms",
+      "regex": "^/dashboard/hotels/rooms(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/dashboard/hotels/rooms(?:/)?$"
+    },
+    {
+      "page": "/dashboard/notifications",
+      "regex": "^/dashboard/notifications(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/dashboard/notifications(?:/)?$"
+    },
+    {
+      "page": "/dashboard/notifications/add",
+      "regex": "^/dashboard/notifications/add(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/dashboard/notifications/add(?:/)?$"
+    },
+    {
+      "page": "/dashboard/pending-checkout",
+      "regex": "^/dashboard/pending\\-checkout(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/dashboard/pending\\-checkout(?:/)?$"
+    },
+    {
+      "page": "/dashboard/permissions",
+      "regex": "^/dashboard/permissions(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/dashboard/permissions(?:/)?$"
+    },
+    {
+      "page": "/dashboard/police-stations",
+      "regex": "^/dashboard/police\\-stations(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/dashboard/police\\-stations(?:/)?$"
+    },
+    {
+      "page": "/dashboard/police-stations/add",
+      "regex": "^/dashboard/police\\-stations/add(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/dashboard/police\\-stations/add(?:/)?$"
+    },
+    {
+      "page": "/dashboard/profile",
+      "regex": "^/dashboard/profile(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/dashboard/profile(?:/)?$"
+    },
+    {
+      "page": "/dashboard/roles",
+      "regex": "^/dashboard/roles(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/dashboard/roles(?:/)?$"
+    },
+    {
+      "page": "/dashboard/search",
+      "regex": "^/dashboard/search(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/dashboard/search(?:/)?$"
+    },
+    {
+      "page": "/dashboard/settings",
+      "regex": "^/dashboard/settings(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/dashboard/settings(?:/)?$"
+    },
+    {
+      "page": "/dashboard/staff",
+      "regex": "^/dashboard/staff(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/dashboard/staff(?:/)?$"
+    },
+    {
+      "page": "/dashboard/staff/add",
+      "regex": "^/dashboard/staff/add(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/dashboard/staff/add(?:/)?$"
+    },
+    {
+      "page": "/dashboard/watchdogs",
+      "regex": "^/dashboard/watchdogs(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/dashboard/watchdogs(?:/)?$"
+    },
+    {
+      "page": "/dashboard/watchdogs/add",
+      "regex": "^/dashboard/watchdogs/add(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/dashboard/watchdogs/add(?:/)?$"
+    },
+    {
+      "page": "/favicon.ico",
+      "regex": "^/favicon\\.ico(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/favicon\\.ico(?:/)?$"
+    },
+    {
+      "page": "/forgot-password",
+      "regex": "^/forgot\\-password(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/forgot\\-password(?:/)?$"
+    },
+    {
+      "page": "/hotel",
+      "regex": "^/hotel(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/hotel(?:/)?$"
+    },
+    {
+      "page": "/police",
+      "regex": "^/police(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/police(?:/)?$"
+    },
+    {
+      "page": "/reset-password",
+      "regex": "^/reset\\-password(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/reset\\-password(?:/)?$"
+    },
+    {
+      "page": "/sys-admin",
+      "regex": "^/sys\\-admin(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/sys\\-admin(?:/)?$"
+    },
+    {
+      "page": "/verify-otp",
+      "regex": "^/verify\\-otp(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/verify\\-otp(?:/)?$"
+    }
+  ],
+  "dataRoutes": [],
+  "rsc": {
+    "header": "rsc",
+    "varyHeader": "rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch",
+    "prefetchHeader": "next-router-prefetch",
+    "didPostponeHeader": "x-nextjs-postponed",
+    "contentTypeHeader": "text/x-component",
+    "suffix": ".rsc",
+    "prefetchSegmentHeader": "next-router-segment-prefetch",
+    "prefetchSegmentSuffix": ".segment.rsc",
+    "prefetchSegmentDirSuffix": ".segments",
+    "clientParamParsing": false,
+    "dynamicRSCPrerender": false
+  },
+  "rewriteHeaders": {
+    "pathHeader": "x-nextjs-rewritten-path",
+    "queryHeader": "x-nextjs-rewritten-query"
+  }
+}

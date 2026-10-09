@@ -1,0 +1,15 @@
+{
+  "headers": {
+    "x-nextjs-stale-time": "300",
+    "x-nextjs-prerender": "1",
+    "x-next-cache-tags": "_N_T_/layout,_N_T_/police/layout,_N_T_/police/page,_N_T_/police"
+  },
+  "segmentPaths": [
+    "/_tree",
+    "/_full",
+    "/police/__PAGE__",
+    "/police",
+    "/_index",
+    "/_head"
+  ]
+}

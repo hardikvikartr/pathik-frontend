@@ -1,0 +1,3 @@
+module.exports=[10582,a=>{"use strict";var b=a.i(87924),c=a.i(72131),d=a.i(50944),e=a.i(69221);let f=["/","/hotel","/police","/sys-admin"];function g({children:a}){let g=(0,d.useRouter)(),h=(0,d.usePathname)(),[i,j]=(0,c.useState)(!1);return((0,c.useEffect)(()=>{let a=e.SecureStorage.getItem("token");e.SecureStorage.getItem("user"),a?f.includes(h)?g.replace("/dashboard"):j(!0):h.startsWith("/dashboard")?g.replace("/"):j(!0)},[h,g]),i)?(0,b.jsx)(b.Fragment,{children:a}):null}a.s(["default",()=>g])}];
+
+//# sourceMappingURL=app_components_AuthGuard_tsx_d6da6bed._.js.map
