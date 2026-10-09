@@ -1,0 +1,17 @@
+{
+  "headers": {
+    "x-nextjs-stale-time": "300",
+    "x-nextjs-prerender": "1",
+    "x-next-cache-tags": "_N_T_/layout,_N_T_/dashboard/layout,_N_T_/dashboard/notifications/layout,_N_T_/dashboard/notifications/add/layout,_N_T_/dashboard/notifications/add/page,_N_T_/dashboard/notifications/add"
+  },
+  "segmentPaths": [
+    "/_tree",
+    "/_full",
+    "/dashboard/notifications/add/__PAGE__",
+    "/dashboard/notifications/add",
+    "/dashboard/notifications",
+    "/dashboard",
+    "/_index",
+    "/_head"
+  ]
+}

@@ -1,0 +1,29 @@
+@import "tailwindcss";
+
+@theme {
+  --color-pathik-primary: #667eea;
+  --color-pathik-primary-dark: #5568d3;
+  --color-pathik-primary-light: #8b9ef5;
+  --color-pathik-secondary: #764ba2;
+  --color-pathik-accent: #f093fb;
+  --color-pathik-accent-dark: #f5576c;
+  --color-pathik-gold: #FFC107;
+  --color-pathik-gold-light: #FFD54F;
+  --color-pathik-teal: #26A69A;
+  --color-pathik-teal-light: #4DB6AC;
+  --color-pathik-coral: #FF6B6B;
+  --color-pathik-coral-light: #FF8E8E;
+  --color-pathik-bg-light: #f5f7fa;
+  --color-pathik-bg-white: #ffffff;
+  --color-pathik-text-dark: #2d3748;
+  --color-pathik-text-medium: #4a5568;
+  --color-pathik-text-light: #718096;
+  --color-pathik-border: #e2e8f0;
+
+  --font-sans: var(--font-poppins);
+}
+
+/* Custom Utilities */
+.pathik-gradient-primary {
+  background: linear-gradient(180deg, var(--color-pathik-primary) 0%, var(--color-pathik-secondary) 100%);
+}

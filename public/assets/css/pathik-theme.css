@@ -1,0 +1,536 @@
+/**
+ * Pathik Hotel Booking Admin - Theme Styles
+ * Unique class names with 'pathik-' prefix to avoid conflicts
+ * Hotel/Hospitality color scheme
+ */
+
+:root {
+  /* Hotel Booking Color Palette */
+  --pathik-primary: #667eea;
+  --pathik-primary-dark: #5568d3;
+  --pathik-primary-light: #8b9ef5;
+  --pathik-secondary: #764ba2;
+  --pathik-accent: #f093fb;
+  --pathik-accent-dark: #f5576c;
+  
+  /* Hospitality Colors */
+  --pathik-gold: #FFC107;
+  --pathik-gold-light: #FFD54F;
+  --pathik-teal: #26A69A;
+  --pathik-teal-light: #4DB6AC;
+  --pathik-coral: #FF6B6B;
+  --pathik-coral-light: #FF8E8E;
+  
+  /* Neutral Colors */
+  --pathik-bg-light: #f5f7fa;
+  --pathik-bg-white: #ffffff;
+  --pathik-text-dark: #2d3748;
+  --pathik-text-medium: #4a5568;
+  --pathik-text-light: #718096;
+  --pathik-border: #e2e8f0;
+  
+  /* Sidebar */
+  --pathik-sidebar-width: 280px;
+  --pathik-sidebar-collapsed-width: 80px;
+  --pathik-sidebar-bg: linear-gradient(180deg, #667eea 0%, #764ba2 100%);
+  
+  /* Shadows */
+  --pathik-shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.08);
+  --pathik-shadow-md: 0 4px 12px rgba(0, 0, 0, 0.1);
+  --pathik-shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.12);
+  
+  /* Transitions */
+  --pathik-transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ============================================
+   SIDEBAR STYLES
+   ============================================ */
+
+.pathik-sidebar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: var(--pathik-sidebar-width);
+  height: 100vh;
+  background: var(--pathik-sidebar-bg);
+  color: white;
+  z-index: 1000;
+  transition: var(--pathik-transition);
+  overflow-y: auto;
+  overflow-x: hidden;
+  box-shadow: var(--pathik-shadow-lg);
+}
+
+.pathik-sidebar.collapsed {
+  width: var(--pathik-sidebar-collapsed-width);
+}
+
+.pathik-sidebar-header {
+  padding: 1.5rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 80px;
+}
+
+.pathik-sidebar-logo {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  text-decoration: none;
+  color: white;
+}
+
+.pathik-sidebar-logo-icon {
+  width: 50px;
+  height: 50px;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  color: var(--pathik-gold);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  flex-shrink: 0;
+}
+
+.pathik-sidebar-logo-text {
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  white-space: nowrap;
+  transition: var(--pathik-transition);
+}
+
+.pathik-sidebar.collapsed .pathik-sidebar-logo-text {
+  opacity: 0;
+  width: 0;
+  overflow: hidden;
+}
+
+.pathik-sidebar-toggle {
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  color: white;
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: var(--pathik-transition);
+  flex-shrink: 0;
+  z-index: 10;
+}
+
+.pathik-sidebar-toggle:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: scale(1.1);
+}
+
+.pathik-sidebar.collapsed .pathik-sidebar-toggle {
+  margin: 0 auto;
+  width: 100%;
+  margin-bottom: 0.5rem;
+}
+
+.pathik-sidebar.collapsed .pathik-sidebar-header {
+  flex-direction: column;
+  justify-content: center;
+  padding: 1rem 0.5rem;
+}
+
+.pathik-sidebar.collapsed .pathik-sidebar-logo {
+  justify-content: center;
+  margin-bottom: 0.5rem;
+}
+
+.pathik-sidebar-menu {
+  list-style: none;
+  padding: 1rem 0;
+  margin: 0;
+}
+
+.pathik-sidebar-menu-item {
+  margin: 0.25rem 0.75rem;
+}
+
+.pathik-sidebar-menu-link {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.875rem 1rem;
+  color: rgba(255, 255, 255, 0.9);
+  text-decoration: none;
+  border-radius: 12px;
+  transition: var(--pathik-transition);
+  position: relative;
+  overflow: hidden;
+}
+
+.pathik-sidebar-menu-link::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.1);
+  transition: left 0.3s ease;
+}
+
+.pathik-sidebar-menu-link:hover::before {
+  left: 100%;
+}
+
+.pathik-sidebar-menu-link:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  transform: translateX(5px);
+}
+
+.pathik-sidebar-menu-link.active {
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.pathik-sidebar-menu-link.active::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 3px;
+  height: 60%;
+  background: var(--pathik-gold);
+  border-radius: 3px 0 0 3px;
+}
+
+.pathik-sidebar-menu-icon {
+  font-size: 1.25rem;
+  width: 24px;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.pathik-sidebar-menu-text {
+  font-weight: 500;
+  white-space: nowrap;
+  transition: var(--pathik-transition);
+}
+
+.pathik-sidebar.collapsed .pathik-sidebar-menu-text {
+  opacity: 0;
+  width: 0;
+  overflow: hidden;
+}
+
+.pathik-sidebar.collapsed .pathik-sidebar-menu-link {
+  justify-content: center;
+  padding: 0.875rem;
+}
+
+.pathik-sidebar-menu-title {
+  padding: 1rem 1.25rem 0.5rem;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: rgba(255, 255, 255, 0.6);
+  font-weight: 600;
+}
+
+.pathik-sidebar.collapsed .pathik-sidebar-menu-title {
+  display: none;
+}
+
+/* ============================================
+   MAIN CONTENT WRAPPER
+   ============================================ */
+
+.pathik-main-wrapper {
+  margin-left: var(--pathik-sidebar-width);
+  transition: var(--pathik-transition);
+  min-height: 100vh;
+  background: var(--pathik-bg-light);
+}
+
+.pathik-sidebar.collapsed ~ .pathik-main-wrapper {
+  margin-left: var(--pathik-sidebar-collapsed-width);
+}
+
+/* ============================================
+   TOP HEADER
+   ============================================ */
+
+.pathik-top-header {
+  background: white;
+  padding: 1rem 2rem;
+  box-shadow: var(--pathik-shadow-sm);
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.pathik-header-left {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.pathik-mobile-menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: var(--pathik-text-dark);
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 8px;
+  transition: var(--pathik-transition);
+}
+
+.pathik-mobile-menu-toggle:hover {
+  background: var(--pathik-bg-light);
+}
+
+.pathik-sidebar-expand-toggle {
+  background: var(--pathik-sidebar-bg);
+  border: none;
+  color: white;
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: var(--pathik-transition);
+  box-shadow: var(--pathik-shadow-md);
+  font-size: 1.25rem;
+}
+
+.pathik-sidebar-expand-toggle:hover {
+  transform: scale(1.1);
+  box-shadow: var(--pathik-shadow-lg);
+}
+
+.pathik-sidebar:not(.collapsed) ~ .pathik-main-wrapper .pathik-sidebar-expand-toggle {
+  display: none;
+}
+
+.pathik-header-search {
+  position: relative;
+  width: 300px;
+}
+
+.pathik-header-search input {
+  width: 100%;
+  padding: 0.625rem 1rem 0.625rem 2.5rem;
+  border: 2px solid var(--pathik-border);
+  border-radius: 10px;
+  font-size: 0.9rem;
+  transition: var(--pathik-transition);
+  background: var(--pathik-bg-light);
+}
+
+.pathik-header-search input:focus {
+  outline: none;
+  border-color: var(--pathik-primary);
+  background: white;
+  box-shadow: 0 0 0 4px rgba(102, 126, 234, 0.1);
+}
+
+.pathik-header-search-icon {
+  position: absolute;
+  left: 0.875rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--pathik-text-light);
+}
+
+.pathik-header-right {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.pathik-header-icon {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  background: var(--pathik-bg-light);
+  color: var(--pathik-text-medium);
+  cursor: pointer;
+  transition: var(--pathik-transition);
+  text-decoration: none;
+}
+
+.pathik-header-icon:hover {
+  background: var(--pathik-primary);
+  color: white;
+  transform: translateY(-2px);
+}
+
+.pathik-header-icon-badge {
+  position: absolute;
+  top: -4px;
+  right: -4px;
+  background: var(--pathik-coral);
+  color: white;
+  border-radius: 50%;
+  width: 18px;
+  height: 18px;
+  font-size: 0.7rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  border: 2px solid white;
+}
+
+.pathik-user-menu {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 10px;
+  transition: var(--pathik-transition);
+}
+
+.pathik-user-menu:hover {
+  background: var(--pathik-bg-light);
+}
+
+.pathik-user-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--pathik-sidebar-bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: 700;
+  font-size: 1rem;
+  border: 2px solid var(--pathik-border);
+}
+
+.pathik-user-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.pathik-user-name {
+  font-weight: 600;
+  color: var(--pathik-text-dark);
+  font-size: 0.9rem;
+}
+
+.pathik-user-role {
+  font-size: 0.75rem;
+  color: var(--pathik-text-light);
+}
+
+/* ============================================
+   CONTENT AREA
+   ============================================ */
+
+.pathik-content-area {
+  padding: 2rem;
+}
+
+.pathik-page-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--pathik-text-dark);
+  margin-bottom: 2rem;
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+
+@media (max-width: 1024px) {
+  .pathik-header-search {
+    width: 200px;
+  }
+}
+
+@media (max-width: 768px) {
+  .pathik-sidebar {
+    transform: translateX(-100%);
+  }
+  
+  .pathik-sidebar.show {
+    transform: translateX(0);
+  }
+  
+  .pathik-main-wrapper {
+    margin-left: 0;
+  }
+  
+  .pathik-mobile-menu-toggle {
+    display: block;
+  }
+  
+  .pathik-header-search {
+    display: none;
+  }
+  
+  .pathik-content-area {
+    padding: 1rem;
+  }
+  
+  .pathik-user-info {
+    display: none;
+  }
+  
+  .pathik-top-header {
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .pathik-page-title {
+    font-size: 1.5rem;
+  }
+  
+  .pathik-header-right {
+    gap: 0.5rem;
+  }
+}
+
+/* ============================================
+   UTILITY CLASSES
+   ============================================ */
+
+.pathik-gradient-primary {
+  background: var(--pathik-sidebar-bg);
+}
+
+.pathik-gradient-gold {
+  background: linear-gradient(135deg, var(--pathik-gold), var(--pathik-gold-light));
+}
+
+.pathik-gradient-teal {
+  background: linear-gradient(135deg, var(--pathik-teal), var(--pathik-teal-light));
+}
+
+.pathik-gradient-coral {
+  background: linear-gradient(135deg, var(--pathik-coral), var(--pathik-coral-light));
+}
+
